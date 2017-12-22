@@ -6,7 +6,7 @@
     <title>Guess the Number</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="vendors/jquery.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/client.js"></script>
 </head>
 <body>
     <h1>Guess The Number</h1>
@@ -14,6 +14,7 @@
         <label>Choose Maximum Number</label>
         <select name="ChooseMax" id="dropDown">
             <!-- <option>pick a value</option> -->
+            <option aria-placeholder="Choose option"></option>
             <option id="ten">10</option>
             <option id="hundred">100</option>
             <option id="thousand">1000</option>
@@ -26,10 +27,7 @@
     </div>
     
     <!-- <form action="" id="formSection">
-        <input type="number" id="playerOne">
-        <input type="number" id="playerTwo">
-        <input type="number" id="playerThree">
-        <input type="number" id="playerFour">
+        
         <button id="submitBtn">Submit Guess</button>
     </form>  -->
 </body>
