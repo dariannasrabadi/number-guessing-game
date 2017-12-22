@@ -10,10 +10,27 @@
 </head>
 <body>
     <h1>Guess The Number</h1>
-    <input type="number" id="playerOne">
-    <input type="number" id="playerTwo">
-    <input type="number" id="playerThree">
-    <input type="number" id="playerFour">
-    <button id="submitBtn">Submit Guess</button>
+    <div id="startContainer">
+        <label>Choose Maximum Number</label>
+        <select name="ChooseMax" id="dropDown">
+            <!-- <option>pick a value</option> -->
+            <option id="ten">10</option>
+            <option id="hundred">100</option>
+            <option id="thousand">1000</option>
+        </select>
+        <button id="startGame">Start Game</button>
+    </div>
+    <div id="mainContainer">
+<!-- append here -->
+
+    </div>
+    
+    <!-- <form action="" id="formSection">
+        <input type="number" id="playerOne">
+        <input type="number" id="playerTwo">
+        <input type="number" id="playerThree">
+        <input type="number" id="playerFour">
+        <button id="submitBtn">Submit Guess</button>
+    </form>  -->
 </body>
 </html>
