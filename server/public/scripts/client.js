@@ -10,6 +10,8 @@ class GuessLog {
     //     if (this.guess1 > num)
     // }
 }
+let roundNum = 1;
+let guessCount = 0;
 let maxNum; // used to store max number selected
 $(document).ready(start);
 
@@ -32,9 +34,10 @@ function clickStart () {
    $container.append('<div><button id="submitUserGuess">Submit Guess</button><button id="cancelGame">Quit Loser</button></div>')
    maxNum = $('#dropDown option:selected').text();
    console.log('this is the max num upon click start:', maxNum);
-   
-   $(this).toggle();
-   $('#dropDown').toggle();
+   $('h2').html('The maximum number is: ' + maxNum); // appending maximum number to the h2 element.
+   $('h3').text(roundNum); // Displays the count of rounds every time submit is clicked.
+   $(this).toggle();// this toggles the start button to remove the start game/quit button.
+   $('#dropDown').toggle(); // remove drop down on toggle of start button. 
    // get dropdown value
 }// end clickStart
 
@@ -44,7 +47,10 @@ console.log('cancel button has been clicked');
 // $('#statContainer').append();
 $('#startGame').toggle();
 $('#dropDown').toggle();
+$('h2').empty();
 $('#mainContainer').empty();
+$('h3').empty();
+roundNum = 1;
 }// end cancel Submit
 
 // submit button functions 
@@ -52,12 +58,12 @@ function submitGuess () {
     console.log('submit button clicked');
     let userInput = new GuessLog($('#playerOne').val(), $('#playerTwo').val(), $('#playerThree').val(), $('#playerFour').val(), maxNum);
     console.log(userInput);
+    roundNum++;
+    $('h3').text(roundNum);  
 }
 
 // To DO
-// round number = every submit click
 // total guess counter = total number of guesses overall
-// create max number indicator = indicates the max number on page so dummys don't forget.
 // high or low
 
 //after server. 
